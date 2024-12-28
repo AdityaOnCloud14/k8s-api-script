@@ -29,21 +29,16 @@ This project provides a Python-based script to automate operations on a Kubernet
    
 **Installation**:
 Clone the repository:
-
 git clone <repository-url>
-
 cd <repository-folder>
 
 Install Python dependencies:
-
 pip install -r requirements.txt
 
 Ensure Kubernetes credentials are configured:
-
 kubectl get nodes
 
-Usage
-
+Usage:
 **Run the Script:**
 python script.py
 
