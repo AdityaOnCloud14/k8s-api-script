@@ -3,6 +3,7 @@ import time
 from kubernetes import client, config
 from kubernetes.client.rest import ApiException
 
+#setup connection with cluster
 def connect_to_cluster():
     """Connect to the Kubernetes cluster using kubeconfig."""
     try:
@@ -10,7 +11,8 @@ def connect_to_cluster():
         print("✅ Connected to the Kubernetes cluster.")
     except Exception as e:
         raise RuntimeError(f"Failed to connect to the cluster. Ensure 'kubectl' is configured correctly. Error: {e}")
-
+        
+#install keda and helm
 def install_helm_and_keda():
     """Install or upgrade Helm and KEDA in the Kubernetes cluster."""
     try:
@@ -29,6 +31,7 @@ def install_helm_and_keda():
     except subprocess.CalledProcessError as e:
         raise RuntimeError(f"Failed to install or upgrade Helm or KEDA. Command error: {e}")
 
+#create deployment controller
 def create_deployment(name, namespace, image, cpu_request, memory_request, cpu_limit, memory_limit, ports, scale_metric_type, scale_metric_value):
     """Create or update a deployment with KEDA scaling."""
     apps_api = client.AppsV1Api()
@@ -102,6 +105,7 @@ def create_deployment(name, namespace, image, cpu_request, memory_request, cpu_l
     except ApiException as e:
         raise RuntimeError(f"Failed to create or update KEDA ScaledObject for '{name}'. Kubernetes API error: {e}")
 
+#health checks
 def monitor_health_status(deployment_name, namespace, interval=5):
     """
     Monitor the health status of a deployment until all pods are in the 'Running' state.
