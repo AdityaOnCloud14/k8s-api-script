@@ -72,9 +72,9 @@ Optional: Dynamic Inputs: Add CLI arguments to make the script dynamic using arg
 Metrics Unavailable:
 
 Ensure Metrics Server is installed and running:
-bash
-Copy code
+
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
 Add --kubelet-insecure-tls to the Metrics Server deployment if using Minikube.
 
 Kubernetes API Errors:
@@ -82,13 +82,17 @@ Kubernetes API Errors:
 Verify cluster access:
 
 kubectl get nodes
+
 Ensure necessary permissions are granted:
 
 kubectl create clusterrolebinding admin-binding --clusterrole=cluster-admin --user=<your-user>
 
 **Future Enhancements**
-Integration with external event sources (e.g., Kafka, RabbitMQ) for KEDA triggers.
+
 Full CI/CD pipeline automation for deployment updates.
+
 Support for multiple namespaces and environments.
-Contributing
+
+**Contributing**:
+
 Contributions are welcome! Please fork the repository and create a pull request for any enhancements or bug fixes.
