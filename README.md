@@ -52,7 +52,8 @@ The script deploys a sample application (nginx) with default configurations.
 Continuously monitors the health of the deployment until all pods are Running.
 Environment Configuration
 
-Edit Deployment Parameters: 
+Edit Deployment Parameters:
+
 Modify the deployment parameters in script.py:
 
 deployment_name = "example-app"
