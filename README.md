@@ -29,6 +29,7 @@ This project provides a Python-based script to automate operations on a Kubernet
    
 **Installation**:
 Clone the repository:
+
 git clone <repository-url>
 cd <repository-folder>
 
@@ -38,8 +39,10 @@ pip install -r requirements.txt
 Ensure Kubernetes credentials are configured:
 kubectl get nodes
 
-Usage:
+**Usage:**
+
 **Run the Script:**
+
 python script.py
 
 **Default Configuration:**
@@ -48,7 +51,9 @@ The script deploys a sample application (nginx) with default configurations.
 **Health Monitoring:**
 Continuously monitors the health of the deployment until all pods are Running.
 Environment Configuration
-Edit Deployment Parameters: Modify the deployment parameters in script.py:
+
+Edit Deployment Parameters: 
+Modify the deployment parameters in script.py:
 
 deployment_name = "example-app"
 namespace = "default"
