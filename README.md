@@ -34,6 +34,7 @@ git clone <repository-url>
 cd <repository-folder>
 
 Install Python dependencies:
+
 pip install -r requirements.txt
 
 Ensure Kubernetes credentials are configured:
