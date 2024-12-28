@@ -1,0 +1,23 @@
+# Python bytecode and cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+
+# Kubernetes configs and credentials
+kubeconfig
+*.yaml
+*.conf
