@@ -31,6 +31,7 @@ This project provides a Python-based script to automate operations on a Kubernet
 Clone the repository:
 
 git clone <repository-url>
+
 cd <repository-folder>
 
 Install Python dependencies:
